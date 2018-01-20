@@ -1,0 +1,41 @@
+<mat-card-header>
+    <div class="header-panel-left header-panel">
+        <mat-card-title>Running Median Panel</mat-card-title>
+        <mat-card-subtitle>The panel calculates the running median of different entries</mat-card-subtitle>
+    </div>
+</mat-card-header>
+<mat-card-content>
+
+    <div class="searchRow">
+        <div class="example-form">
+            <mat-form-field class="example-full-width">
+                <input [disabled]="disableInputNrElements" [(ngModel)]="nrOfElements" (ngModelChange)="checkNrElementsInput()" type="number"
+                    matInput placeholder="Nr. of elements to add" [(value)]=nrOfElements>
+            </mat-form-field>
+        </div>
+        <button [disabled]="disableConfirmNrElementsButton" (click)="confirmNrElements()" mat-raised-button color="primary">Confirm</button>
+    </div>
+
+    <div class="searchRow">
+        <div class="example-form">
+            <mat-form-field class="example-full-width">
+                <input [disabled]="disableInputElementToAdd" [(ngModel)]="elementToAdd" (ngModelChange)="checkElementToAddInput()" type="number"
+                    matInput placeholder="Element to add">
+            </mat-form-field>
+        </div>
+        <button [disabled]="disableConfirmElementToAddButton" (click)="confirmElementToAdd()" mat-raised-button color="primary">Confirm</button>
+    </div>
+
+    <div class="searchRow listRow">
+        <mat-list>
+            <mat-list-item *ngFor="let element of arrayElements">{{element}}</mat-list-item>
+        </mat-list>
+    </div>
+
+
+    <div class="searchRow">
+        <p class="result-text">Result: </p>
+        <mat-chip color="primary" selected="true">{{result}}</mat-chip>
+    </div>
+
+</mat-card-content>

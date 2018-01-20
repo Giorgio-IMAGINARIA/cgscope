@@ -1,0 +1,40 @@
+<mat-card-header>
+        <div class="header-panel-left header-panel">
+            <mat-card-title>Mouse vs Mouse Panel</mat-card-title>
+            <mat-card-subtitle>The panel distinguishes the meaning of the word "mouse" in two different sentences</mat-card-subtitle>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+    
+        <div class="searchRow">
+            <div class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input [disabled]="disableInputNrElements" [(ngModel)]="nrOfElements" (ngModelChange)="checkNrElementsInput()" type="text"
+                        matInput placeholder="First sentence" [(value)]=nrOfElements>
+                </mat-form-field>
+            </div>
+            <button [disabled]="disableConfirmNrElementsButton" (click)="confirmNrElements()" mat-raised-button color="primary">Confirm</button>
+        </div>
+    
+        <div class="searchRow">
+            <div class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input [disabled]="disableInputElementToAdd" [(ngModel)]="elementToAdd" (ngModelChange)="checkElementToAddInput()" type="text"
+                        matInput placeholder="Second sentence">
+                </mat-form-field>
+            </div>
+            <button [disabled]="disableConfirmElementToAddButton" (click)="confirmElementToAdd()" mat-raised-button color="primary">Confirm</button>
+        </div>
+    
+    
+        <div class="searchRow">
+            <p class="result-text">First sentence result: </p>
+            <mat-chip color="primary" selected="true">{{firstResult}}</mat-chip>
+        </div>
+
+        <div class="searchRow">
+            <p class="result-text">Second sentence result: </p>
+            <mat-chip color="primary" selected="true">{{secondResult}}</mat-chip>
+        </div>
+    
+    </mat-card-content>

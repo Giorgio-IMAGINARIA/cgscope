@@ -1,0 +1,43 @@
+.my-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.spacer{
+    width: 100%;
+    height:56px;
+}
+
+.main-content-wrap{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.generic-card{
+    width: 100%;
+}
+
+#mainbar-style{
+    top: 0;
+  position: fixed;
+  z-index:999;
+    font-weight: 400;
+    height:56px;
+    padding: 8px 16px;
+}
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.card-wrap{
+    padding:2rem; 
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    justify-content: center;
+}

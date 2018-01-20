@@ -1,0 +1,25 @@
+<div class="my-content">
+  <mat-toolbar color="primary" id="mainbar-style" class="mat-elevation-z6">
+    <span class="example-fill-remaining-space">CGscope - test - Giorgio Mazzei</span>
+  </mat-toolbar>
+  <div class="spacer"></div>
+  <div id="main-content-wrap">
+    <mat-tab-group>
+      <mat-tab label="Median">
+        <div class="card-wrap">
+          <mat-card class="generic-card">
+            <medianPanel></medianPanel>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Mouse">
+        <div class="card-wrap">
+          <mat-card class="generic-card">
+            <mousePanel></mousePanel>
+          </mat-card>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<router-outlet></router-outlet>

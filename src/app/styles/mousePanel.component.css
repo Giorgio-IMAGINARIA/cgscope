@@ -1,0 +1,44 @@
+.searchRow{
+    justify-content: space-between;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .listRow{
+      border-top: solid 1px #757575;
+      border-bottom: solid 1px #757575;
+      height:184px;
+      overflow-y: scroll;
+  }
+  .result-text{
+      margin:0;
+  }
+
+  .header-panel{
+    flex-grow: 1;
+}
+
+.header-panel-left{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.mat-form-field{
+    width:initial;
+}
+.searchRow{
+    padding:16px;
+    display:flex;
+}
+
+
+
+
